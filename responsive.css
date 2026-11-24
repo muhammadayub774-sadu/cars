@@ -1,0 +1,225 @@
+/* =========================================
+   FERRARI STORE — RESPONSIVE ADAPTATION
+   ========================================= */
+
+/* Laptop (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.1rem;
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .filters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .timeline-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        transform: translateY(-130%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .nav-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu .nav-link {
+        color: var(--text-primary);
+        width: 100%;
+        padding: 8px 0;
+        font-size: 1rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .contact-banner,
+    .pd-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-slide {
+        height: 440px;
+    }
+
+    .slide-title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 110px 0 55px;
+    }
+
+    .hero-title {
+        font-size: 2.35rem;
+    }
+
+    .hero-desc {
+        font-size: 0.96rem;
+    }
+
+    .hero-stats {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .carousel-slide {
+        height: 380px;
+    }
+
+    .carousel-slide-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+
+    .slide-title {
+        font-size: 1.65rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-user-name {
+        display: none;
+    }
+
+    .profile-trigger {
+        width: 40px;
+        padding: 0;
+    }
+
+    .modal-dialog {
+        padding: 22px 18px;
+    }
+}
+
+/* Small Mobile (max-width: 540px) */
+@media (max-width: 540px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .brand-sub {
+        display: none;
+    }
+
+    .brand-title {
+        font-size: 1.15rem;
+    }
+
+    .nav-actions {
+        gap: 6px;
+    }
+
+    .icon-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.85rem;
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .categories-grid,
+    .filters-grid,
+    .cars-grid,
+    .timeline-grid,
+    .achievements-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-banner {
+        padding: 24px 18px;
+    }
+
+    .drawer-panel {
+        max-width: 100%;
+    }
+
+    .pd-main-img {
+        height: 220px;
+    }
+
+    .pd-actions {
+        flex-direction: column;
+    }
+
+    .pd-actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERRARI STORE — Passion for Excellence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="brand-logo" aria-label="Ferrari Store Home">
+                <div class="shield-emblem">
+                    <span class="shield-top">S F</span>
+                    <i class="fa-solid fa-horse-head"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">FERRARI</span>
+                    <span class="brand-sub">OFFICIAL STORE</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#cars" class="nav-link">Cars</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#favorites-section" class="nav-link">Favorites</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="navSearchBtn" title="Qidirish" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="icon-btn" id="themeToggleBtn" title="Tun / Kun rejimi" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+                </button>
+                <button class="icon-btn" id="navFavBtn" title="Sevimlilar" aria-label="Favorites">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="favCountBadge">0</span>
+                </button>
+                <button class="icon-btn" id="navCartBtn" title="Savatcha" aria-label="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartCountBadge">0</span>
+                </button>
+                <button class="icon-btn profile-trigger" id="navProfileBtn" title="Profil" aria-label="Profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span class="nav-user-name" id="navUserName">Kirish</span>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1920&q=85" alt="Ferrari Flagship Supercar" id="heroImg">
+            <div class="hero-overlay"></div>
+            <div class="hero-red-glow"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> MARANELLO HERITAGE • 65 EXCLUSIVE MODELS
+            </div>
+            <h1 class="hero-title">FERRARI — <span>PASSION FOR EXCELLENCE.</span></h1>
+            <p class="hero-desc">
+                Italiya muhandislik san'ati, Formula-1 texnologiyalari va cheksiz tezlik uyg'unligi. 
+                Afsonaviy klassikadan tortib eng so'nggi gibrid giperkarlargacha — o'z orzuingizdagi Ferrarini kashf eting.
+            </p>
+            <div class="hero-buttons">
+                <a href="#cars" class="btn btn-primary">
+                    <span>Explore Cars</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <span>Discover More</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>65+</h3>
+                    <p>Afsonaviy Modellar</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h3>1,030 HP</h3>
+                    <p>Maksimal Quvvat</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h3>350+ km/h</h3>
+                    <p>Yuqori Tezlik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED CAROUSEL -->
+    <section class="carousel-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-subtitle">EXCLUSIVE SHOWCASE</span>
+                    <h2 class="section-title">Flagman Modellar Galereyasi</h2>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevSlideBtn" aria-label="Previous Slide">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextSlideBtn" aria-label="Next Slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+
+            <div class="carousel-pagination" id="carouselPagination"></div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">ENGINEERED PERFECTION</span>
+                <h2 class="section-title">Avtomobil Toifalari</h2>
+            </div>
+            <div class="categories-grid" id="categoryCards">
+                <button class="category-card active" data-category="all">
+                    <i class="fa-solid fa-car-side"></i>
+                    <h3>Barcha Modellar</h3>
+                    <span>65 ta avtomobil</span>
+                </button>
+                <button class="category-card" data-category="V12">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h3>V12 Afsonalar</h3>
+                    <span>Atmosfera va Gibrid</span>
+                </button>
+                <button class="category-card" data-category="V8">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3>V8 Supercar</h3>
+                    <span>Turbo va Sport</span>
+                </button>
+                <button class="category-card" data-category="V6">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>V6 Hybrid</h3>
+                    <span>Yangi Avlod</span>
+                </button>
+                <button class="category-card" data-category="Classic">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3>Icona & Klassika</h3>
+                    <span>Kolleksiya Durdonalari</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH, FILTERS & CATALOG -->
+    <section class="catalog-section" id="cars">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-subtitle">MARANELLO COLLECTION</span>
+                    <h2 class="section-title">Ferrari Avtomobillar Katalogi</h2>
+                </div>
+                <div class="results-counter" id="resultsCounter">65 ta avtomobil ko'rsatilmoqda</div>
+            </div>
+
+            <!-- Search & Advanced Filter Panel -->
+            <div class="filter-panel glass-panel">
+                <div class="search-box-wrapper">
+                    <div class="search-input-group">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" placeholder="Model, dvigatel (V12, V8), yil, rang yoki ot kuchi bo'yicha qidiring..." autocomplete="off">
+                        <button class="clear-search-btn hidden" id="clearSearchInput" aria-label="Clear search">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions hidden" id="searchSuggestions"></div>
+                </div>
+
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="engineFilter">Dvigatel turi</label>
+                        <select id="engineFilter">
+                            <option value="all">Barcha dvigatellar</option>
+                            <option value="V12">V12</option>
+                            <option value="V8">V8</option>
+                            <option value="V6">V6</option>
+                            <option value="Flat-12">Flat-12</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="yearFilter">Ishlab chiqarilgan yil</label>
+                        <select id="yearFilter">
+                            <option value="all">Barcha yillar</option>
+                            <option value="2020-2026">2020 — 2026 (Zamonaviy)</option>
+                            <option value="2010-2019">2010 — 2019</option>
+                            <option value="1990-2009">1990 — 2009</option>
+                            <option value="1960-1989">1960 — 1989 (Klassik)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="hpFilter">Ot kuchi (HP)</label>
+                        <select id="hpFilter">
+                            <option value="all">Barcha quvvatlar</option>
+                            <option value="800+">800+ HP (Giperkar)</option>
+                            <option value="600-799">600 — 799 HP</option>
+                            <option value="400-599">400 — 599 HP</option>
+                            <option value="0-399">400 HP gacha (Klassika)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="priceRangeFilter">Narx oralig'i</label>
+                        <select id="priceRangeFilter">
+                            <option value="all">Barcha narxlar</option>
+                            <option value="0-300000">$300,000 gacha</option>
+                            <option value="300000-600000">$300,000 — $600,000</option>
+                            <option value="600000-1500000">$600,000 — $1,500,000</option>
+                            <option value="1500000+">$1,500,000 dan yuqori</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortFilter">Saralash</label>
+                        <select id="sortFilter">
+                            <option value="default">Standart tartib</option>
+                            <option value="price-asc">Narx: Arzonidan qimmatiga</option>
+                            <option value="price-desc">Narx: Qimmatidan arzoniga</option>
+                            <option value="year-desc">Yil: Eng yangilari</option>
+                            <option value="hp-desc">Quvvat: Eng kuchlilari</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="color-filter-bar">
+                    <span class="filter-label">Rang bo'yicha:</span>
+                    <div class="color-swatches" id="colorSwatches">
+                        <button class="color-chip active" data-color="all">Barchasi</button>
+                        <button class="color-chip" data-color="Red"><span class="dot dot-red"></span>Red</button>
+                        <button class="color-chip" data-color="Black"><span class="dot dot-black"></span>Black</button>
+                        <button class="color-chip" data-color="White"><span class="dot dot-white"></span>White</button>
+                        <button class="color-chip" data-color="Yellow"><span class="dot dot-yellow"></span>Yellow</button>
+                        <button class="color-chip" data-color="Blue"><span class="dot dot-blue"></span>Blue</button>
+                        <button class="color-chip" data-color="Silver"><span class="dot dot-silver"></span>Silver</button>
+                        <button class="color-chip" data-color="Green"><span class="dot dot-green"></span>Green</button>
+                    </div>
+                    <button class="btn-reset-filters" id="clearAllFiltersBtn">
+                        <i class="fa-solid fa-rotate-left"></i> Filtrlarni tozalash
+                    </button>
+                </div>
+
+                <div class="active-filters-bar hidden" id="activeFiltersBar"></div>
+            </div>
+
+            <!-- Cars Grid -->
+            <div class="cars-grid" id="carsGrid"></div>
+
+            <!-- No Results State -->
+            <div class="no-results hidden" id="noResultsBox">
+                <i class="fa-solid fa-car-burst"></i>
+                <h3>Hech qanday Ferrari topilmadi</h3>
+                <p>Qidiruv so'rovingiz yoki tanlangan filtrlarga mos avtomobil mavjud emas.</p>
+                <button class="btn btn-primary" id="noResultsResetBtn">Barcha filtrlarni tozalash</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAVORITES SECTION -->
+    <section class="favorites-section" id="favorites-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-subtitle">YOUR PERSONAL GARAGE</span>
+                    <h2 class="section-title">Sevimli Avtomobillar</h2>
+                </div>
+                <span class="gold-pill" id="favSectionCount">0 ta saqlangan</span>
+            </div>
+            <div class="cars-grid" id="favoritesGrid"></div>
+            <div class="empty-state" id="emptyFavoritesBox">
+                <i class="fa-regular fa-heart"></i>
+                <h3>Sevimlilar ro'yxati bo'sh</h3>
+                <p>Yoqtirgan Ferrari modellaringizdagi yurakcha belgisini bosing va ularni shu yerda saqlang.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT FERRARI SECTION -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-img-card">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1000&q=85" alt="Ferrari Heritage Maranello">
+                        <div class="heritage-badge">
+                            <span class="year">1947</span>
+                            <span class="label">MARANELLO, ITALY</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">SCUDERIA & HERITAGE</span>
+                    <h2 class="section-title">Enzo Ferrari va Afsonaning Tug'ilishi</h2>
+                    <p>
+                        <strong>Enzo Ferrari</strong> 1929-yilda Scuderia Ferrari poyga jamoasiga asos soldi, 1947-yilda esa Maranello zavodidan ilk <strong>Ferrari 125 S</strong> avtomobili yo'lga chiqdi. O'shandan beri Sakrayotgan Tulpor (Cavallino Rampante) ramzi mutlaq mukammallik, tezlik va hashamat timsoliga aylandi.
+                    </p>
+                    <p>
+                        Formula-1 tarixidagi eng muvaffaqiyatli jamoa sifatida Ferrari 16 ta Konstruktorlar kubogi va 15 ta Pilotalar chempionligini qo'lga kiritgan. Har bir ko'cha avtomobili bevosita F1 poyga yo'llarida sinovdan o'tgan aerodinamika va dvigatel texnologiyalarini o'zida mujassam etadi.
+                    </p>
+
+                    <div class="achievements-row">
+                        <div class="ach-box">
+                            <h4>16x</h4>
+                            <span>F1 Konstruktorlar Kubogi</span>
+                        </div>
+                        <div class="ach-box">
+                            <h4>15x</h4>
+                            <span>F1 Jahon Chempioni</span>
+                        </div>
+                        <div class="ach-box">
+                            <h4>240+</h4>
+                            <span>Grand Prix G'alabalari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-wrapper">
+                <h3 class="timeline-heading">Tarixiy Yutuqlar Xronologiyasi</h3>
+                <div class="timeline-grid">
+                    <div class="timeline-card">
+                        <span class="t-year">1947</span>
+                        <h4>Ferrari 125 S</h4>
+                        <p>Maranelloda ishlab chiqarilgan birinchi V12 dvigatelli Ferrari avtomobili va ilk g'alaba.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="t-year">1962</span>
+                        <h4>250 GTO Afsonasi</h4>
+                        <p>Dunyodagi eng qimmat va mashhur kolleksiya avtomobili yaratildi.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="t-year">1987</span>
+                        <h4>Ferrari F40</h4>
+                        <p>Enzo Ferrari boshchiligida yaratilgan so'nggi model — 320 km/soat tezlikka chiqqan ilk seriyali superkar.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="t-year">2013</span>
+                        <h4>LaFerrari Hybrid</h4>
+                        <p>HY-KERS gibrid tizimiga ega 963 ot kuchili birinchi Ferrari giperkari.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="t-year">2024</span>
+                        <h4>12Cilindri & SF90 XX</h4>
+                        <p>Atmosferali V12 an'analari va ekstremal poyga texnologiyalarining yangi cho'qqisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="contact-banner glass-panel">
+                <div class="contact-info">
+                    <span class="section-subtitle">VIP CONCIERGE</span>
+                    <h2>Biz Bilan Bog'laning</h2>
+                    <p>Shaxsiy konfiguratsiya, test-drayv yoki buyurtma bo'yicha mutaxassislarimiz sizga yordam berishga tayyor.</p>
+                    
+                    <div class="contact-details-list">
+                        <a href="tel:+998916100000" class="contact-link-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+998 91 610 ** **</span>
+                        </a>
+                        <a href="tel:+998906100000" class="contact-link-item">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span>+998 90 610 ** **</span>
+                        </a>
+                        <a href="mailto:concierge@ferrari-store.uz" class="contact-link-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>concierge@ferrari-store.uz</span>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ferrari/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Official Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Ferrari" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Official Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/user/ferrariworld" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Official YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <h3>Xabar Yuborish</h3>
+                    <div class="form-row">
+                        <div class="input-field">
+                            <label for="contactName">Ismingiz *</label>
+                            <input type="text" id="contactName" required placeholder="Ismingizni kiriting">
+                        </div>
+                        <div class="input-field">
+                            <label for="contactPhone">Telefon raqam *</label>
+                            <input type="tel" id="contactPhone" required placeholder="+998 90 123 45 67">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="contactEmail">Email *</label>
+                        <input type="email" id="contactEmail" required placeholder="email@example.com">
+                    </div>
+                    <div class="input-field">
+                        <label for="contactMessage">Xabaringiz *</label>
+                        <textarea id="contactMessage" rows="3" required placeholder="Qaysi Ferrari modeli sizni qiziqtirmoqda?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        <span>Xabarni Yuborish</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <span class="brand-title">FERRARI STORE</span>
+                    <p>Passion for Excellence. Maranello merosi asosida yaratilgan rasmiy uslubdagi premium avtomobil vitrinasi.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#cars">Cars</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#favorites-section">Favorites</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">© 2026 FERRARI STORE. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Yuqoriga qaytish" title="Yuqoriga">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal-backdrop hidden" id="productModal">
+        <div class="modal-dialog product-modal-dialog">
+            <button class="modal-close" id="closeProductModal" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="product-modal-body" id="productModalContent"></div>
+        </div>
+    </div>
+
+    <!-- SHOPPING CART DRAWER -->
+    <div class="drawer-backdrop hidden" id="cartDrawerBackdrop">
+        <aside class="drawer-panel" id="cartDrawer">
+            <div class="drawer-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Savatcha (<span id="drawerCartCount">0</span>)</h3>
+                <button class="modal-close" id="closeCartDrawer" aria-label="Yopish">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="drawer-body" id="cartItemsContainer"></div>
+            <div class="drawer-footer" id="cartFooter">
+                <div class="cart-total-row">
+                    <span>Umumiy summa:</span>
+                    <strong id="cartTotalPrice">$0</strong>
+                </div>
+                <button class="btn btn-primary full-width" id="proceedCheckoutBtn">
+                    <span>Buyurtmani Rasmiylashtirish (Checkout)</span>
+                    <i class="fa-solid fa-credit-card"></i>
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal-backdrop hidden" id="checkoutModal">
+        <div class="modal-dialog checkout-modal-dialog">
+            <button class="modal-close" id="closeCheckoutModal" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="checkout-header">
+                <span class="section-subtitle">RESERVATION & ORDER</span>
+                <h2>Buyurtmani Rasmiylashtirish</h2>
+                <p class="demo-notice">Eslatma: Ushbu platforma ko'rgazma (demo) rejimida ishlaydi. Haqiqiy bank to'lovi yechilmaydi; buyurtma shaxsiy kabinetingizda saqlanadi.</p>
+            </div>
+            <form id="checkoutForm" class="checkout-form" novalidate>
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="chkFirstName">Ism *</label>
+                        <input type="text" id="chkFirstName" required placeholder="Ismingiz">
+                    </div>
+                    <div class="input-field">
+                        <label for="chkLastName">Familiya *</label>
+                        <input type="text" id="chkLastName" required placeholder="Familiyangiz">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="chkPhone">Telefon raqam *</label>
+                        <input type="tel" id="chkPhone" required placeholder="+998 90 123 45 67">
+                    </div>
+                    <div class="input-field">
+                        <label for="chkEmail">Email *</label>
+                        <input type="email" id="chkEmail" required placeholder="user@example.com">
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="chkAddress">Yetkazib berish manzili *</label>
+                    <input type="text" id="chkAddress" required placeholder="Shahar, tuman, ko'cha, uy raqami">
+                </div>
+                <div class="checkout-summary-box">
+                    <div class="summary-line">
+                        <span>Tanlangan avtomobil(lar):</span>
+                        <strong id="chkCarModels">-</strong>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Umumiy narx:</span>
+                        <strong id="chkTotalPrice">$0</strong>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">
+                    <span>Buyurtmani Tasdiqlash</span>
+                    <i class="fa-solid fa-check-circle"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PROFILE & AUTH MODAL -->
+    <div class="modal-backdrop hidden" id="profileModal">
+        <div class="modal-dialog profile-modal-dialog">
+            <button class="modal-close" id="closeProfileModal" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="profileModalContent"></div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
